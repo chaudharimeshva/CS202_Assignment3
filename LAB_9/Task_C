@@ -1,0 +1,49 @@
+using System;
+
+class Task_D
+{
+    static int factorial(int n)
+    {
+        int fact = 1;
+        for(int i=0; i<n; i++)
+        {
+            fact *= (i + 1);
+        }
+        return fact;
+    }
+
+    static void Main()
+    {
+        Console.WriteLine("For Loop Output: ");
+        for(int i=1; i<=10; i++)
+        {
+            Console.Write(i);
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+        Console.WriteLine("Forrach loop output: ");
+
+        int[] num = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        foreach(int i in num)
+        {
+            Console.Write(i);
+            Console.WriteLine();
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("Do-While loop output (type 'exit' to stop): ");
+
+        string s;
+        do
+        {
+            Console.Write("Enter number (enter 'exit' to stop): ");
+            s = Console.ReadLine();
+
+            if (s != "exit")
+            {
+                int n = Convert.ToInt32(s);
+                Console.WriteLine($"Factorial of {n} = {factorial(n)}");
+            }
+        } while (s != "exit");
+    }
+}
