@@ -1,0 +1,42 @@
+using System;
+
+class TaskC
+{
+    static void Main()
+    {
+        // Accepting user input
+        Console.Write("Enter value of x: ");
+        int x = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter value of y: ");
+        int y = Convert.ToInt32(Console.ReadLine());
+
+        // Performing operations
+        int s = x + y;
+        int diff = x - y;
+        int mul = x * y;
+        double div;
+
+        if (y != 0)
+        {
+            div = (double)x / y;
+        }
+        else
+        {
+            Console.WriteLine("Division by zero is not allowed");
+            div = double.NaN;
+        }
+
+        // if-else block
+        if (s % 2 == 0)
+            Console.WriteLine("The sum is even.");
+        else
+            Console.WriteLine("The sum is odd.");
+
+        // Displaying the output
+        Console.WriteLine($"\nSum: {s}");
+        Console.WriteLine($"Difference: {diff}");
+        Console.WriteLine($"Multiplication: {mul}");
+        Console.WriteLine($"Division: {div}");
+    }
+}
